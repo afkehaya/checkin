@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141219162930) do
+ActiveRecord::Schema.define(version: 20141229010905) do
 
   create_table "pins", force: true do |t|
     t.string   "description"
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 20141219162930) do
     t.datetime "updated_at"
     t.text     "questions"
     t.integer  "user_id"
+    t.text     "question"
+    t.text     "question1"
+    t.text     "question2"
+    t.text     "question3"
+    t.text     "question4"
+    t.text     "question5"
+    t.text     "question6"
   end
 
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"

@@ -1,14 +1,19 @@
+
+<div class="jumbotron center">
 <h1>All your checkins are listed below</h1>
 
-      <h3>Checkin</h3>
+      
     
 
  
     <% @pins.each do |pin| %>
-     
-        <p><%= pin.description %></p>
-        <p><%= pin.questions %></p>
-        <p><%= pin.user.email if pin.user %></p>
+     <h3>Checkin</h3>
+          <%= pin.question %>
+          <%= pin.question1 %>
+          <%= pin.question2 %>
+          <%= pin.question3 %>
+          <%= pin.question4 %>
+        <%= pin.user.email if pin.user %>
         <%= link_to 'Show', pin %>
         <% if pin.user == current_user %>
        <%= link_to 'Edit', edit_pin_path(pin) %>
@@ -16,11 +21,10 @@
       <% end %>
       
     <% end %>
- 
-
 
 <br>
 
 <% if user_signed_in? %>
   <%= link_to 'New Checkin', new_pin_path %>
 <% end %>
+</div>

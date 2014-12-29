@@ -12,25 +12,25 @@
   <% end %>
 
   <div class="form-group">
-    <%= label_tag(:questions, "You can free-write anything you would like to share here, or you can respond to one or more of the prompts below.") %>
-    <%= text_area(:questions, "Have a nice day!", class: "form-control") %>
+    <%= label_tag(:question, "You can free-write anything you would like to share here, or you can respond to one or more of the prompts below.") %>
+    <%= f.text_area :question, class: "form-control" %>
   </div>
    <div class="form-group">
-    <%= label_tag(:questions, "You can write about your own actions or thoughts here.") %>
-    <%= text_area(:questions, "Have a nice day!", class: "form-control") %>
+    <%= label_tag(:question1, "You can write about your own actions or thoughts here.") %>
+    <%= f.text_area :question1, class: "form-control" %>
   </div>
    <div class="form-group">
-    <%= label_tag(:questions, "You can write about the actions of another person here.") %>
+    <%= label_tag(:question2, "You can write about the actions of another person here.") %>
     <p>Please include the names of anyone that was there</p>
-    <%= text_area(:questions, "Have a nice day!", class: "form-control") %>
+    <%= f.text_area :question2, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= label_tag(:questions, "If you have a question, comment, or message for your teacher, please write it here.") %>
-    <%= text_area(:questions, "Have a nice day!", class: "form-control") %>
+    <%= label_tag(:question3, "If you have a question, comment, or message for your teacher, please write it here.") %>
+    <%= f.text_area :question3, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= label_tag(:questions, "Are you considering another action? You can write about it here.") %>
-    <%= text_area(:questions, "Have a nice day!", class: "form-control") %>
+    <%= label_tag(:question4, "Are you considering another action? You can write about it here.") %>
+    <%= f.text_area :question4, class: "form-control" %>
   </div>
   <div class="form-group">
     <%= f.submit "submit", class: "btn btn-lg btn-primary" %>

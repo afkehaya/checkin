@@ -16,3 +16,11 @@
 .jumbotron {
 	text-align: center;
 }
+.pinshow {
+	background-color: white;
+	margin: 10px;
+	border-radius: 20px;
+	padding: 10px;
+	width: 75%;
+	height: 10%;
+}
