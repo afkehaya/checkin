@@ -9,18 +9,23 @@
   <div class="panel-body">
 
       <div class="pinshow">
+        <h3>You can free-write anything you would like to share here, or you can respond to one or more of the prompts below.</h3>
       	<%= @pin.question %>
       </div>
        <div class="pinshow">
+        <h3>You can write about your own actions or thoughts here.</h3>
       	<%= @pin.question1 %>
       </div>
        <div class="pinshow">
+        <h3>You can write about the actions of another person here.</h3>
       	<%= @pin.question2 %>
       </div>
        <div class="pinshow">
+        <h3>If you have a question, comment, or message for your teacher, please write it here.</h3>
       	<%= @pin.question3 %>
       </div>
        <div class="pinshow">
+        <h3>Are you considering another action? You can write about it here.</h3>
       	<%= @pin.question4 %>
       </div>
       <% if @pin.user == current_user %>
