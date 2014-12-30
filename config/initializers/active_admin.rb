@@ -6,6 +6,7 @@ ActiveAdmin.setup do |config|
   #
   config.site_title = "Checkin"
 
+
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
@@ -39,9 +40,11 @@ ActiveAdmin.setup do |config|
   # a namespace block. For example, to change the site title
   # within a namespace:
   #
-  #   config.namespace :admin do |admin|
-  #     admin.site_title = "Custom Admin Title"
-  #   end
+     config.namespace :admin do |admin|
+       admin.site_title = "Checkin"
+     end
+     
+
   #
   # This will ONLY change the title for the admin section. Other
   # namespaces will continue to use the main "site_title" configuration.
@@ -131,6 +134,7 @@ ActiveAdmin.setup do |config|
   #
   # Enable and disable Batch Actions
   #
+
   config.batch_actions = true
 
   # == Controller Filters
