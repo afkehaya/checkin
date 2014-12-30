@@ -7,5 +7,10 @@
      <h1>Login or Sign up to check in!</h1>
 <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
 <%= link_to "Sign up", new_user_session_path, class: "btn btn-primary btn-lg" %>
-<% end %>
 </div>
+		<div class="teacher">
+		<%= link_to "Teacher Sign In", new_admin_user_session_path, class: "btn btn-default btn-sm" %>
+		<p>Are you a teacher?</p>
+		</div>
+<% end %>
+

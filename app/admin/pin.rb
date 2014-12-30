@@ -1,7 +1,8 @@
 ActiveAdmin.register Pin do
   menu false
   ActiveAdmin.register Pin, as: "Checkin" do
-  
+   
+
    index do
     column :id do |checkin|
             link_to checkin.id, [:admin, checkin]

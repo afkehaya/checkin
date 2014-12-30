@@ -27,3 +27,10 @@
 .newpin {
 	margin: 10px;
 }
+.teacher {
+	text-align: right;
+	font-size: 30px;
+}
+.teacher p {
+	font-size: 10px;
+}
