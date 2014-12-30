@@ -8,13 +8,16 @@
 
     <div class="panel-body">
       <% @pins.each do |pin| %>
+
+      <% if pin.user == current_user %>
        <h3>Checkin <%= pin.created_at %></h3>
-        
           <%= pin.user.email if pin.user %>
-          <%= link_to 'View', pin,  class: "btn btn-lg btn-default" %>
-          <% if pin.user == current_user %>
-         <%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-lg btn-default"  %>
-        <%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-lg btn-default" %>
+          <%= link_to 'View', pin,  class: "btn btn-lg btn-default" %> 
+
+          <%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-lg btn-default"  %>
+          <%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-lg btn-default" %>
+        <% else %>
+        <h1>You must be sigened in to sview your checkins</h1>
         <% end %>
         
       <% end %>
