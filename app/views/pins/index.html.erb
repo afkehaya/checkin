@@ -12,7 +12,7 @@
     <div class="panel-body">
       <% @pins.each do |pin| %>
 
-      <% if pin.user == current_user %>
+      <%= pin.user.name if pin.user %>
        <h3>Checkin <%= pin.created_at %></h3>
           <%= pin.user.email if pin.user %>
           <%= link_to 'View', pin,  class: "btn btn-lg btn-default" %> 
