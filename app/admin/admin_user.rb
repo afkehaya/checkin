@@ -3,7 +3,6 @@ ActiveAdmin.register AdminUser do
   menu label: "Admins"
   index do
     selectable_column
-    column  :name 
     id_column
     column :email
     column :current_sign_in_at
