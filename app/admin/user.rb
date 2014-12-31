@@ -2,15 +2,15 @@ ActiveAdmin.register User do
   menu false
   ActiveAdmin.register User, as: "Student" do
     menu priority: 3
+
    index do
     column :name 
     column "Email", :email
     column "Last Signed In", :last_sign_in_at
-    column "Number of Sign Ins", :sign_in_count
-    actions
 
-  end
+   end
    filter :name
+
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

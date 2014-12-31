@@ -13,7 +13,6 @@ ActiveAdmin.register Pin do
     column "Response 3", :question2
     column "Response 4", :question3
     column "Response 5", :question4
-    actions
   end
 
   filter :user
