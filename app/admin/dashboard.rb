@@ -5,7 +5,7 @@ ActiveAdmin.register_page "Dashboard" do
   content title: proc{ I18n.t("active_admin.dashboard") } do
     
      
-    section h1 "Recent Checkins" do
+     panel "Recent Checkins" do
         table_for Pin.order("updated_at desc").limit(10) do
         column :id do |pin|
             link_to pin.id, [:admin, pin]
@@ -14,6 +14,7 @@ ActiveAdmin.register_page "Dashboard" do
         end
         strong { link_to "View All Checkins", admin_pins_path} 
     end
+
     # Here is an example of a simple dashboard with columns and panels.
     #
     # columns do
