@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141231170933) do
+ActiveRecord::Schema.define(version: 20141231220144) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -48,18 +48,14 @@ ActiveRecord::Schema.define(version: 20141231170933) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
   create_table "pins", force: true do |t|
-    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "questions"
     t.integer  "user_id"
     t.text     "question"
     t.text     "question1"
     t.text     "question2"
     t.text     "question3"
     t.text     "question4"
-    t.text     "question5"
-    t.text     "question6"
   end
 
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"
