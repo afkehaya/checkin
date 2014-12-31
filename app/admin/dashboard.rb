@@ -7,10 +7,10 @@ ActiveAdmin.register_page "Dashboard" do
      
      panel "Recent Checkins" do
         table_for Pin.order("updated_at desc").limit(10) do
-        column :id do |pin|
-            link_to pin.id, [:admin, pin]
+        column :name do |pin|
+            link_to pin.user.name, [:admin, pin]
         end
-        column :updated_at
+        column "Checkin Date", :updated_at
         end
         strong { link_to "View All Checkins", admin_pins_path} 
     end
