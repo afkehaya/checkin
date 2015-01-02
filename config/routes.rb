@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  resources :classrooms
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :pins
+  resources :classrooms
 
   devise_for :users
   root "pages#home"
