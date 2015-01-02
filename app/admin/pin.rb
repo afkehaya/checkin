@@ -1,9 +1,11 @@
 ActiveAdmin.register Pin do
   menu false 
+
   show :title => "Checkin" do
   render "pins"
   active_admin_comments
   end
+
   ActiveAdmin.register Pin, as: "Checkin" do
    menu priority: 2 
 

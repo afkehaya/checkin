@@ -5,7 +5,7 @@ ActiveAdmin.register User do
    index do
     column :name 
     column "View Checkin", :id do |checkin|
-            link_to checkin.id, [:admin, checkin]
+            link_to checkin.created_at, [:admin, checkin]
           end
     column "Email", :email
     column "Last Signed In", :last_sign_in_at
