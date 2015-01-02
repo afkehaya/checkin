@@ -1,5 +1,4 @@
 class ClassroomsController < InheritedResources::Base
-
   private
 
     def classroom_params

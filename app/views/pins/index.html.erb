@@ -14,7 +14,6 @@
 
       <%= pin.user.name if pin.user %>
        <h3>Checkin <%= pin.created_at %></h3>
-          <%= pin.user.email if pin.user %>
           <%= link_to 'View', pin,  class: "btn btn-lg btn-default" %> 
 
           <%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-lg btn-default"  %>
@@ -33,4 +32,4 @@
     <% end %>
       </div>
     </div>
-  </div>>-->
+  </div>-->

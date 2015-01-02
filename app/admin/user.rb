@@ -4,7 +4,7 @@ ActiveAdmin.register User do
     menu priority: 3
    index do
     column :name 
-    column "View Checkin", :id do |checkin|
+    column "View Profile", :id do |checkin|
             link_to checkin.created_at, [:admin, checkin]
           end
     column "Email", :email
