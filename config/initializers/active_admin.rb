@@ -6,7 +6,6 @@ ActiveAdmin.setup do |config|
   #
   config.site_title = "Checkin"
 
-
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
@@ -45,7 +44,7 @@ ActiveAdmin.setup do |config|
        admin.site_title = "Checkin"
      end
      
-
+     
   #
   # This will ONLY change the title for the admin section. Other
   # namespaces will continue to use the main "site_title" configuration.

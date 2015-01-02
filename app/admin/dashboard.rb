@@ -12,7 +12,7 @@ ActiveAdmin.register_page "Dashboard" do
         end
         column "Checkin Date", :updated_at
         end
-        strong { link_to "View All Checkins", admin_pins_path} 
+        strong { link_to "View All Checkins", admin_checkins_path} 
     end
 
     # Here is an example of a simple dashboard with columns and panels.

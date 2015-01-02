@@ -1,11 +1,15 @@
 ActiveAdmin.register Pin do
   menu false 
+  show :title => "Checkin" do
+  render "pins"
+  active_admin_comments
+  end
   ActiveAdmin.register Pin, as: "Checkin" do
    menu priority: 2 
 
-   index do
+   index :title => "Checkin" do
     column :Student do |checkin|
-            link_to checkin.id, [:admin, checkin]
+            link_to checkin.user.name, [:admin, checkin]
           end
     column "Submission Date", :updated_at
     column "Response 1", :question 
@@ -17,6 +21,7 @@ ActiveAdmin.register Pin do
 
   filter :user
   filter :created_at
+
 
 
 

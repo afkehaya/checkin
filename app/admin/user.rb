@@ -12,7 +12,7 @@ ActiveAdmin.register User do
     column "Number of Sign Ins", :sign_in_count
    
 
-  end
+    end
    filter :name
 
   # See permitted parameters documentation:
