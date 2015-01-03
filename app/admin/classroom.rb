@@ -5,7 +5,7 @@ ActiveAdmin.register Classroom do
 
         panel "Recent Checkins" do
         table_for Pin.order("updated_at desc").limit(10) do
-        column :name do |pin|
+        column :Student do |pin|
             link_to pin.user.name, [:admin, pin]
         end
         column "Checkin Date", :updated_at
@@ -13,6 +13,7 @@ ActiveAdmin.register Classroom do
         strong { link_to "View All Checkins", admin_checkins_path} 
     end
   end
+  
 
 
   # See permitted parameters documentation:

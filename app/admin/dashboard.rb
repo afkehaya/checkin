@@ -14,7 +14,7 @@ ActiveAdmin.register_page "Dashboard" do
     
      panel "Recent Checkins" do
         table_for Pin.order("updated_at desc").limit(10) do
-        column :name do |pin|
+        column :Student do |pin|
             link_to pin.user.name, [:admin, pin]
         end
         column "Checkin Date", :updated_at
