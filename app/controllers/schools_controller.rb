@@ -15,17 +15,17 @@ class SchoolsController < InheritedResources::Base
   def edit
   end
 
-  def create
-    @school = school.new(pin_params)
+   def create
+    @school = current_user.schools.build(school_params)
     if @school.save
-      redirect_to @school, notice: 'School was successfully created.'
+      redirect_to @school, notice: 'school was successfully created.'
     else
       render action: 'new'
     end
   end
 
   def update
-    if @school.update(pin_params)
+    if @school.update(school_params)
       redirect_to @school, notice: 'School was successfully updated.'
     else
       render action: 'edit'

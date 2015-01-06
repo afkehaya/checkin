@@ -16,16 +16,16 @@ class ClassroomsController < InheritedResources::Base
   end
 
   def create
-    @classroom = Classroom.new(pin_params)
+    @classroom = Classroom.new(classroom_params)
     if @classroom.save
-      redirect_to @pin, notice: 'Classroom was successfully created.'
+      redirect_to @classroom, notice: 'Classroom was successfully created.'
     else
       render action: 'new'
     end
   end
 
   def update
-    if @classroom.update(pin_params)
+    if @classroom.update(classroom_params)
       redirect_to @classroom, notice: 'Classroom was successfully updated.'
     else
       render action: 'edit'

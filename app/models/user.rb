@@ -26,9 +26,7 @@ class User < ActiveRecord::Base
 
   has_many :pins
   
-  belongs_to :school
-
-  belongs_to :classroom
+ belongs_to :classroom
 
   validates :name, presence: true
 end

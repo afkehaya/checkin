@@ -11,6 +11,5 @@
 
 class Classroom < ActiveRecord::Base
 	has_many :users
-	has_many :pins
-	belongs_to :school
+	has_one :school
 end

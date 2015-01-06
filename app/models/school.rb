@@ -10,6 +10,4 @@
 
 class School < ActiveRecord::Base
 	has_many :classrooms
-	has_many :users
-	has_many :pins
 end
