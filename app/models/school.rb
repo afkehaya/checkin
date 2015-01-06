@@ -1,16 +1,15 @@
 # == Schema Information
 #
-# Table name: classrooms
+# Table name: schools
 #
 #  id         :integer          not null, primary key
-#  teacher    :string(255)
-#  user_id    :integer
+#  school     :string(255)
 #  created_at :datetime
 #  updated_at :datetime
 #
 
-class Classroom < ActiveRecord::Base
+class School < ActiveRecord::Base
+	has_many :classrooms
 	has_many :users
 	has_many :pins
-	belongs_to :school
 end
