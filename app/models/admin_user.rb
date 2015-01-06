@@ -23,5 +23,7 @@ class AdminUser < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, 
          :recoverable, :rememberable, :trackable, :validatable
-
+         blongs_to :school
+         has_many :users
+         has_many :classrooms
 end
