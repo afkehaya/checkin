@@ -25,6 +25,9 @@ gem 'jbuilder', '~> 2.0'
 # Added Devise for Users
 gem 'devise'
 
+# annotate to show db
+gem 'annotate'
+
 #Adding active admin
 gem 'activeadmin', github: 'activeadmin'
 # bundle exec rake doc:rails generates the API under doc/api.
